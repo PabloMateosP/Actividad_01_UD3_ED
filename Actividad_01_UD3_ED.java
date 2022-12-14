@@ -20,13 +20,21 @@ public class Actividad_01_UD3_ED
     private static String nombreArchivo = "fichero.dat";
     private static FileInputStream flujoEntrada = null;
     private static BufferedInputStream buferDeEntrada = null;
-
+    /**
+     *
+     * @throws FileNotFoundException mediante este throws lo que declaramos es una excepción para que si no apareciesen los parámetros requeridos no funcionase 
+     */
     public static void inicializarArchivos() throws FileNotFoundException
     {
         setFlujoEntrada(new FileInputStream(getNombreArchivo()));
         setBuferDeEntrada(new BufferedInputStream(getFlujoEntrada()));
     }
     
+    /**
+     *
+     * @return Nuestro return nos devuelve el total de texto de nuestro archivo 
+     * @throws IOException Mediante esta palabra declaramos un restricción
+     */
     public static int mostrarTextoDeArchivo() throws IOException
     {
         int total = 0;
@@ -75,33 +83,36 @@ public class Actividad_01_UD3_ED
     }
 
     /**
-     * @return the bufer
+     * @return the bufer. Con este return lo que nuestro programa hace es devolvernos es el bufer presente.
      */
     public static byte[] getBufer() {
         return bufer;
     }
 
     /**
-     * @param aBufer the bufer to set
+     * @param aBufer con esta igualdad entre bufer = aBufer lo que comparamos e igualamos ambas palabras.
      */
     public static void setBufer(byte[] aBufer) {
         bufer = aBufer;
     }
 
     /**
-     * @return the nombreArchivo
+     * @return the nombreArchivo, el return presente nos devuelve el nombre del archivo 
      */
     public static String getNombreArchivo() {
         return nombreArchivo;
     }
 
-    
+    /**
+     *
+     * @param aNombreArchivo, al igual que con el aBufer lo que hacemos es comparar e igualar las palabras dandole el valor de una a la otra.
+     */
     public static void setNombreArchivo(String aNombreArchivo) {
         nombreArchivo = aNombreArchivo;
     }
 
     /**
-     * @return the flujoEntrada
+     * @return the flujoEntrada, mediante este return devolvemos el flujo de Entrada en nuestro método 
      */
     public static FileInputStream getFlujoEntrada() {
         return flujoEntrada;
@@ -115,7 +126,7 @@ public class Actividad_01_UD3_ED
     }
 
     /**
-     * @return the buferDeEntrada
+     * @return the buferDeEntrada, mediante el return devolvemos el bufer de entrada en nuestro método 
      */
     public static BufferedInputStream getBuferDeEntrada() {
         return buferDeEntrada;
